@@ -17,13 +17,11 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 
+-- Change to "USER" if you use Linux.
+-- Change to "UserProfile" if you use Windows.
 vim.opt.undodir = os.getenv("UserProfile") .. "/.vim/undodir"
 
 vim.opt.scrolloff = 9
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "120"
 vim.opt.updatetime = 100
-
-if vim.g.neovide then
-   vim.g.neovide_cursor_vfx_mode = "pixiedust"
-end
