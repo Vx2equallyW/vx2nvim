@@ -12,9 +12,12 @@ spec("plugins.harpoon")
 spec("plugins.lsp-zero")
 spec("plugins.mason")
 spec("plugins.lualine")
+spec("plugins.mason-nvim-dap")
+spec("plugins.nvim-dap")
+spec("plugins.nvim-dap-ui")
 
 --Lazy:
-require "plugins.lazy"
+require "plugins.lazy";
 
 --Keymaps nvim:
 require "keymaps.nvim_keymaps.base"
@@ -25,6 +28,7 @@ require "keymaps.nvim_keymaps.russian_language"
 require "keymaps.plugins_keymaps.telescope_keymaps"
 require "keymaps.plugins_keymaps.harpoon_keymaps"
 require "keymaps.plugins_keymaps.lsp_keymaps"
+require "keymaps.plugins_keymaps.debugger_keymaps"
 
 --Plugins config:
-require "plugins.plugins_config.plugins_config"
+require "plugins.plugins_config.lualine_config"

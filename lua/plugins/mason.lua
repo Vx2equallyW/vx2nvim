@@ -4,6 +4,9 @@ local M = {
       'williamboman/mason-lspconfig.nvim',
       'nvim-lua/plenary.nvim',
 	},
+    ensure_installed = {
+        "codelldb",
+    },
 }
 
 M.servers = {
