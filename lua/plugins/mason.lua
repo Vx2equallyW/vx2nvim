@@ -1,11 +1,13 @@
 local M = {
-	'williamboman/mason.nvim',
-	dependencies = {
-      'williamboman/mason-lspconfig.nvim',
+    'mason-org/mason.nvim',
+    opts = {},
+    dependencies = {
+      'mason-org/mason-lspconfig.nvim',
       'nvim-lua/plenary.nvim',
-	},
+      'neovim/nvim-lspconfig',
+    },
     ensure_installed = {
-        "codelldb",
+      "codelldb",
     },
 }
 
@@ -16,35 +18,15 @@ M.servers = {
 }
 
 function M.config()
-
-	local lsp = require("lsp-zero")
-	lsp.preset("recommended")
-
-   lsp.set_preferences({
-		suggest_lsp_servers = false,
-		sign_icons = {
-			error = 'E',
-			warn = 'W',
-			hint = 'H',
-			info = 'I'
-		}
-	})
 	
-	require("lsp-zero").setup()
 	require("mason").setup()
 	
 	require("mason-lspconfig").setup {
-		function (server_name)
-		    require "lspconfig" [server_name].setup {}
-		end
-	}
-	
-	require("mason-lspconfig").setup {
-      ensure_installed = M.servers,
-      automatic_installation = true,
+              ensure_installed = M.servers,
+              automatic_installation = true,
 	}
 
-   vim.diagnostic.config({
+    vim.diagnostic.config({
 	   virtual_text = true
 	})
 

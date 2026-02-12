@@ -2,9 +2,9 @@ vim.g.mapleader = " "
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 8
-vim.opt.softtabstop = 8
-vim.opt.shiftwidth = 8
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.smartindent = true
 
@@ -17,6 +17,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = false
 
+-- undodir spawns in every project where you start nvim. (My speculations. Don't throw tomatoes)
 -- Change to "USER" if you use Linux.
 -- Change to "UserProfile" if you use Windows.
 -- vim.opt.undodir = os.getenv("USER") .. "/.vim/undodir"

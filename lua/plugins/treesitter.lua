@@ -5,7 +5,7 @@ local M = {
 }
 
 function M.config()
-   require "nvim-treesitter.configs".setup {
+   require "nvim-treesitter.config".setup {
       ensure_installed = { "c", "lua", "rust" , "bash" },
       sync_install = true,
       auto_install = true,
