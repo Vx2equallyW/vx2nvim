@@ -1,5 +1,5 @@
 local M = {
-    "mfussenegger/nvim-dap",
+  "mfussenegger/nvim-dap",
 }
 
 return M
